@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/skeleton.css">
+
+    <title>Clase 12</title>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/ejs.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row">
+
+        <h4>Productos</h4>
+        <h5>Ingrese Nuevo Producto</h5>
+
+        <div>
+            <form action="">
+                Producto<input type="text" id="title" required>
+                Precio<input type="text" id="price" required>
+                Imágen<input type="text" id="thumbnail" required>
+                <button type="submit" class="bttnCreateProd button-primary">Cargar</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <h5>Lista de Productos</h5>
+        <div class='productsLit eight columns'>
+            <!-- Aquí inserto tabla productos -->
+        </div>
+    </div>
+
+    <div class="row">
+        <h4>Mensajes</h4>
+
+        <div>
+            e-mail <input type="email" id="email">
+        </div>
+
+        <div class='chat'>
+            <ul class="messagesList">
+                <!-- Aquí inserto chats -->
+            </ul>
+        </div>
+
+        <div>
+            <input type="text" id="message" class="five columns">
+            <button class="bttnSendMsg button-primary">Enviar</button>
+        </div>
+    </div>
+
+</div>
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/products.js"></script>
+    <script type="module" src="./js/chat.js"></script>
+</body>
+</html>
