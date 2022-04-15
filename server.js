@@ -5,8 +5,12 @@ import {initWebSocket} from "./src/routes/sockets.js";
 
 //creo un servidor HTTP y websockets
 const app = express();
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
 const httpServer = new HttpServer(app);
 export const io = new IOServer(httpServer);
+
 //inicio los WebSockets:
 initWebSocket(io);
 
