@@ -1,7 +1,7 @@
 import express from "express";
 import { Server as IOServer } from "socket.io";
 import { Server as HttpServer } from "http";
-import {initWebSocket} from "./routes/sockets.js";
+import {initWebSocket} from "./src/routes/sockets.js";
 
 //creo un servidor HTTP y websockets
 const app = express();

@@ -23,6 +23,7 @@ getTemplate('chatTemp.ejs', initChat);
 
 //LISTENER ENVIAR MENSAJE
 document.querySelector('#sendMessageForm').addEventListener('submit', (e)=>{
+    e.preventDefault();
     //creo el objeto
     const objMessage={
         email: document.getElementById('email').value,
