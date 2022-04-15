@@ -18,6 +18,6 @@ initWebSocket(io);
 app.use(express.static('./public'));
 
 //Inicio Servidor:
-const PORT = 8080 //process.env.port;
+const PORT = process.env.PORT || 8080;
 const activeServer = httpServer.listen(PORT, ()=>console.log(`HTTP Server Up on Port ${activeServer.address().port}`))
 activeServer.on('error', err => console.error(err));
