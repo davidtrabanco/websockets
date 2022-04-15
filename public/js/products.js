@@ -12,7 +12,7 @@ getTemplate('productTemp.ejs', getProducts);
 
 
 //Evento botón nuevo producto:
-document.querySelector('.bttnCreateProd').addEventListener('click', ()=>{
+document.querySelector('#newProductFrom').addEventListener('submit', ()=>{
     //creo el objecto con el nuevo producto
     const newProduct = {
         title: document.getElementById("title").value,

@@ -11,7 +11,7 @@ export const io = new IOServer(httpServer);
 initWebSocket(io);
 
 //Configuro carpeta pública:
-app.use(express.static('../public/'));
+app.use(express.static('./public'));
 
 //Inicio Servidor:
 const PORT = 8080;

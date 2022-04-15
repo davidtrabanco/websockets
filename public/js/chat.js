@@ -22,7 +22,7 @@ const addMessageToDom = (templateEJS, arrayMsjs) => {
 getTemplate('chatTemp.ejs', initChat);
 
 //LISTENER ENVIAR MENSAJE
-document.querySelector('.bttnSendMsg').addEventListener('click', ()=>{
+document.querySelector('#sendMessageForm').addEventListener('submit', (e)=>{
     //creo el objeto
     const objMessage={
         email: document.getElementById('email').value,
@@ -34,3 +34,4 @@ document.querySelector('.bttnSendMsg').addEventListener('click', ()=>{
     document.getElementById('message').value="";
     document.getElementById('message').focus();
 });
+

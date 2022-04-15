@@ -17,13 +17,13 @@ controller.addProduct = (product)=>{
 }
 
 //CHAT----------------------------------------------------
-const chatFile = new FileManager('../db/chatHistoric.txt')
+const chatFile = new FileManager('./db/chatHistoric.json')
 
 controller.saveChat = async (chat) =>{
     //guardo el chat completo
     chatFile.save(chat);
 }
 
-controller.loadChat = () => {
-    return chatFile.readFile();
+controller.loadChat = async () => {
+    return await chatFile.readFile();
 }

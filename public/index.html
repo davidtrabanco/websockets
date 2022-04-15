@@ -23,11 +23,11 @@
         <h5>Ingrese Nuevo Producto</h5>
 
         <div>
-            <form action="">
+            <form action="" id="newProductFrom">
                 Producto<input type="text" id="title" required>
                 Precio<input type="text" id="price" required>
                 Imágen<input type="text" id="thumbnail" required>
-                <button type="submit" class="bttnCreateProd button-primary">Cargar</button>
+                <button type="submit" class="bttnCreateProd button-primary" form="newProductFrom">Cargar</button>
             </form>
         </div>
 
@@ -43,19 +43,23 @@
     <div class="row">
         <h4>Mensajes</h4>
 
-        <div>
-            e-mail <input type="email" id="email">
-        </div>
+            <form onsubmit="" id="sendMessageForm">
+                <div>
+                    e-mail <input type="email" id="email" required placeholder="usuario@dominio.com" form="sendMessageForm">
+                </div>
 
-        <div class='chat'>
-            <ul class="messagesList">
-                <!-- Aquí inserto chats -->
-            </ul>
-        </div>
+                <div class='chat'>
+                    <ul class="messagesList">
+                        <!-- Aquí inserto chats -->
+                    </ul>
+                </div>
 
-        <div>
-            <input type="text" id="message" class="five columns">
-            <button class="bttnSendMsg button-primary">Enviar</button>
+                <div>
+            
+                <input type="text" id="message" class="five columns" required form="sendMessageForm" placeholder="Mensaje">
+                <button type="submit" form="sendMessageForm" class="bttnSendMsg button-primary">Enviar</button>
+            </form>
+
         </div>
     </div>
 

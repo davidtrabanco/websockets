@@ -8,12 +8,15 @@ export const initWebSocket = (io) =>{
         
         //cargo el historial del chat desde archivo:
         controller.loadChat()
-        .then( chatHistoric =>{ chatBuffer = chatHistoric })
+        .then( chatHistoric =>{ 
+            chatBuffer = chatHistoric 
+            //NUEVA CONEXION:
+            socket.emit('chatHistoric', chatBuffer) //Envío historial de chat
+        })
 
         //NUEVA CONEXION
         socket.emit('products', controller.getAllProducts()) //Envío Productos
-        socket.emit('chatHistoric', chatBuffer) //Envío historial de chat
-
+        
         //PRODUCTOS------------------------------------------------
         socket.on('newProduct', product=>{
             controller.addProduct(product);//guardo el producto
